@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrew Eshak — BIM Architect Engineer</title>
+<meta name="description" content="Andrew Eshak — BIM Architect Engineer in Dubai. Revit, Navisworks, Revizto, ISO 19650. Projects across the UAE, Saudi Arabia, Australia and Egypt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calm, precise, architectural — a printed practice monograph
+   IDEA: the page behaves like his portfolio book: dark plates, serif titles, sheets you leaf through
+   PICTURE: a strip of three project plates up top; every project opens as a sheet set
+   COLOUR and TYPE: charcoal ground, bone ink, glass-blue accent; Cormorant Garamond + Inter
+   LAYOUT: fixed identity column left, long scroll right; stacks on narrow screens */
+:root{color-scheme:light dark;
+ --bg:light-dark(#f3f2ee,#111214);--panel:light-dark(#e9e7e1,#18191c);--card:light-dark(#ffffff,#1d1e22);
+ --ink:light-dark(#16171a,#ecebe6);--mute:light-dark(#5c5e64,#9c9da3);--line:light-dark(#d6d3cb,#2b2d32);
+ --acc:light-dark(#1f5f8f,#8cc3e6)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:24px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;margin:0;text-wrap:balance}
+.wrap{display:grid;grid-template-columns:330px minmax(0,1fr);min-height:100vh}
+aside{position:sticky;top:0;height:100vh;overflow:auto;background:var(--panel);border-right:1px solid var(--line);padding:36px 30px;display:flex;flex-direction:column;gap:22px}
+.photo{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;display:block;box-shadow:0 18px 40px -18px #0008}
+aside h1{font-size:46px;letter-spacing:.01em}
+.role{font-weight:600;margin-top:6px}
+.cred{color:var(--mute);font-size:14px;margin-top:4px}
+dl{margin:0;display:grid;gap:12px;font-size:14px}
+dt{color:var(--mute);font-size:13px}dd{margin:0;overflow-wrap:anywhere}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:14px;font-weight:500;background:var(--card)}
+.btn:hover{border-color:var(--acc);text-decoration:none}
+.btn.pri{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+.open{font-size:13px;color:var(--mute);display:flex;gap:8px;align-items:center}
+.dot{width:8px;height:8px;border-radius:50%;background:#3fb27f;flex:none}
+main{padding:0 0 60px}
+.band{padding:clamp(28px,4vw,56px) clamp(18px,4vw,56px);max-width:1240px}
+nav.scroll{position:sticky;top:0;z-index:5;display:flex;gap:4px;overflow-x:auto;padding:10px clamp(18px,4vw,56px);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.scroll a{flex:none;color:var(--mute);font-size:14px;padding:10px 12px;border-radius:8px}
+nav.scroll a:hover{color:var(--ink);background:var(--panel);text-decoration:none}
+.strip{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:10px;height:clamp(260px,40vw,460px)}
+.strip button{all:unset;cursor:pointer;position:relative;overflow:hidden;border-radius:12px;background:#000}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.strip button:hover img{transform:scale(1.04)}
+.strip span{position:absolute;left:14px;bottom:12px;color:#fff;font-size:13px;font-weight:500;text-shadow:0 1px 8px #000c}
+.intro{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:36px;margin-top:34px;align-items:start}
+.intro h2{font-size:clamp(32px,4vw,48px)}
+.intro p{color:var(--mute);max-width:62ch}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.fact b{display:block;font-family:"Cormorant Garamond",serif;font-size:38px;line-height:1}
+.fact small{color:var(--mute);font-size:13px}
+section h2.t{font-size:clamp(32px,3.6vw,44px);margin-bottom:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.box h3{font-size:24px;margin-bottom:8px}.box p{margin:0;color:var(--mute);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;background:var(--card)}
+.job{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;padding:22px 0;border-top:1px solid var(--line)}
+.job .when{color:var(--mute);font-size:14px}
+.job h3{font-size:26px}
+.job .co{font-weight:600;font-size:15px;margin:4px 0 10px}
+.job .co span{color:var(--mute);font-weight:400}
+.job ul{margin:0 0 10px;padding-left:18px;color:var(--mute);font-size:15px}
+.job .pj{font-size:14px}
+.now{display:inline-block;margin-left:8px;font:500 12px Inter,sans-serif;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:1px 8px;vertical-align:middle}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filters button{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 14px Inter,sans-serif;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{all:unset;cursor:pointer;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-3px);border-color:var(--acc)}
+.card:focus-visible{outline:2px solid var(--acc)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#000}
+.card .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:25px}
+.card .m{color:var(--mute);font-size:13px}
+.card p{margin:4px 0 0;font-size:14px;color:var(--mute)}
+.card .more{margin-top:auto;padding-top:10px;color:var(--acc);font-size:13px;font-weight:500}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.cert b{font-size:15px;line-height:1.35}
+.cert .iss{color:var(--acc);font-size:13px;font-weight:500}
+.cert small{color:var(--mute);font-size:13px;overflow-wrap:anywhere}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+footer{margin-top:20px;border-top:1px solid var(--line)}
+footer h2{font-size:clamp(34px,4vw,52px)}
+footer p{color:var(--mute)}
+dialog{border:0;padding:0;width:min(1200px,96vw);max-height:94vh;background:#0c0d0f;color:#eee;border-radius:14px}
+dialog::backdrop{background:#000c}
+.dh{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px}
+.dh h3{font-size:26px;color:#fff}
+.dh small{color:#9a9ba0;font-size:13px}
+.dbtn{min-width:44px;min-height:44px;border-radius:999px;border:1px solid #333;background:#16171a;color:#fff;font-size:18px;cursor:pointer}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.slides::-webkit-scrollbar{display:none}
+.slides figure{flex:0 0 100%;margin:0;scroll-snap-align:center;display:flex;justify-content:center;background:#0c0d0f}
+.slides img{width:100%;max-height:78vh;object-fit:contain}
+.dn{display:flex;justify-content:center;align-items:center;gap:14px;padding:10px 0 14px;font-size:13px;color:#9a9ba0}
+@media(max-width:1100px){.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.intro{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:900px){
+ .wrap{grid-template-columns:minmax(0,1fr)}
+ aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:150px minmax(0,1fr);align-items:start;gap:18px 22px}
+ aside .rest{grid-column:1/-1}
+ nav.scroll{position:static}
+}
+@media(max-width:600px){
+ aside{grid-template-columns:96px minmax(0,1fr);padding:24px 18px}
+ aside h1{font-size:34px}
+ .strip{grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:auto}
+ .strip button{aspect-ratio:3/4}.strip button:first-child{grid-column:1/-1;aspect-ratio:4/3}
+ .grid3,.two,.facts{grid-template-columns:minmax(0,1fr)}
+ .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .job{grid-template-columns:minmax(0,1fr);gap:6px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+  <img class="photo" src="img/andrew.jpg" alt="Portrait of Andrew Eshak">
+  <div>
+    <h1>Andrew Eshak</h1>
+    <div class="role">BIM Architect Engineer</div>
+    <div class="cred">PMP® · BSI® ISO 19650 Certified · Revizto Expert L1 &amp; L2</div>
+  </div>
+  <div class="rest" style="display:flex;flex-direction:column;gap:20px">
+    <div class="open"><span class="dot"></span>Open to new opportunities · Dubai, on-site or hybrid</div>
+    <dl>
+      <div><dt>Based in</dt><dd>Dubai, United Arab Emirates</dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:andrew.eshak47@gmail.com">andrew.eshak47@gmail.com</a></dd></div>
+      <div><dt>Phone / WhatsApp</dt><dd><a href="tel:+971504748335">+971 50 474 8335</a></dd></div>
+      <div><dt>Languages</dt><dd>Arabic (native) · English (fluent)</dd></div>
+    </dl>
+    <div class="btns">
+      <a class="btn pri" href="https://www.linkedin.com/in/andreweshak" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="#projects">Portfolio</a>
+      <a class="btn" href="#certifications">Credentials</a>
+    </div>
+  </div>
+</aside>
+
+<main>
+<nav class="scroll" aria-label="Sections">
+  <a href="#about">About</a><a href="#expertise">What I do</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+
+<section class="band" id="about">
+  <div class="strip" id="strip"></div>
+  <div class="intro">
+    <div>
+      <h2>Models that get built — from federated coordination to finished interiors.</h2>
+      <p>I'm a BIM Architect Engineer at Binladin Contracting Group in Dubai, with more than seven years of architectural and BIM delivery across the UAE, Saudi Arabia, Australia and Egypt. I lead architectural and structural modelling, run clash detection across disciplines, and work to ISO 19650 so the information in the model is as reliable as the geometry.</p>
+      <p>My work spans high-rise residential towers, luxury hotels, airport infrastructure and off-site prefabrication — on the contractor side, close to the site, where a clean model saves real time and money.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>7+</b><small>years in BIM &amp; architecture</small></div>
+      <div class="fact"><b>4</b><small>countries delivered in</small></div>
+      <div class="fact"><b>10</b><small>featured projects</small></div>
+      <div class="fact"><b>LOD 500</b><small>models up to as-built</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="expertise">
+  <h2 class="t">What I do</h2>
+  <div class="grid3" id="skills"></div>
+  <div class="chips" id="tools"></div>
+</section>
+
+<section class="band" id="experience">
+  <h2 class="t">Experience</h2>
+  <div id="jobs"></div>
+</section>
+
+<section class="band" id="projects">
+  <h2 class="t">Projects</h2>
+  <div class="filters" id="filters" role="group" aria-label="Filter projects by country"></div>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section class="band" id="certifications">
+  <h2 class="t">Certifications</h2>
+  <div class="certs" id="certs"></div>
+  <h3 style="font-size:28px;margin:34px 0 14px">Credly badges</h3>
+  <div class="certs" id="badges"></div>
+  <div class="btns" style="margin-top:16px"><a class="btn" href="https://www.credly.com/users/andrew-eshak.8b222753" target="_blank" rel="noopener">Verify all badges on Credly →</a></div>
+</section>
+
+<section class="band" id="education">
+  <h2 class="t">Education</h2>
+  <div class="two">
+    <div class="box"><h3>Bachelor's Degree, Interior Design</h3><p>Higher Institute of Applied Arts, Egypt · 2013 – 2018<br>Good with Honours · Graduation project: Tourist Hotel</p></div>
+    <div class="box"><h3>Site internships</h3><p>Orascom Construction · Ministry of Defense project, New Administrative Capital (2016) and Zewail City of Science and Technology (2015)</p></div>
+  </div>
+</section>
+
+<footer class="band" id="contact">
+  <h2>Let's build something well coordinated.</h2>
+  <p>Open to BIM Architect, BIM Coordinator and BIM Lead roles in the UAE and GCC.</p>
+  <div class="btns">
+    <a class="btn pri" href="mailto:andrew.eshak47@gmail.com">andrew.eshak47@gmail.com</a>
+    <a class="btn" href="tel:+971504748335">+971 50 474 8335</a>
+    <a class="btn" href="https://www.linkedin.com/in/andreweshak" target="_blank" rel="noopener">linkedin.com/in/andreweshak</a>
+  </div>
+</footer>
+</main>
+</div>
+
+<dialog id="dlg" aria-labelledby="dlgT">
+  <div class="dh"><div><h3 id="dlgT"></h3><small id="dlgM"></small></div><button class="dbtn" id="close" aria-label="Close">✕</button></div>
+  <div class="slides" id="slides"></div>
+  <div class="dn"><button class="dbtn" id="prev" aria-label="Previous sheet">‹</button><span id="count"></span><button class="dbtn" id="next" aria-label="Next sheet">›</button></div>
+</dialog>
+
+<script>
+{
+const skills=[
+ ["BIM coordination","Run clash detection in Navisworks and Revizto and drive resolution between architecture, structure and MEP before it reaches site."],
+ ["Architectural & structural modelling","Revit models from LOD 350 to 500 — geometry, schedules and technical detailing ready for shop drawings and as-built."],
+ ["Information management","ISO 19650 workflows, BEP implementation and CDE / ACC information exchange with clear ownership and QA/QC checks."],
+ ["Shop drawings & interiors","Interior fit-out packages, joinery, finishes and RCPs for hotels, residences and prefabricated bathroom pods."],
+ ["Quantities & 4D","Quantity takeoffs straight from the Revit model and support for 4D sequencing and site logistics."],
+ ["Team & stakeholders","Coordination meetings and minutes, shop-drawing tracking, client BIM review responses and mentoring junior modellers."]];
+const tools=["Autodesk Revit","Navisworks Manage","Revizto","ACC / BIM 360","AutoCAD","ArchiCAD","3ds Max","Photoshop","ISO 19650","BEP","Clash detection","LOD 350–500","QTO","4D"];
+const jobs=[
+ {t:"BIM Architect Engineer",c:"Binladin Contracting Group (BCG)",w:"May 2026 – Present",l:"Dubai, UAE",now:1,
+  d:["Develop structural Revit models and coordinate structural shop drawings for Al Maktoum International Airport","Run clash detection in Navisworks and Revizto across Arch, STR and MEP","Apply ISO 19650 workflows, support BEP implementation and manage CDE/ACC exchange","Mentor junior BIM modellers on standards, QA/QC and coordination"],
+  p:"Al Maktoum International Airport (AMIA) · Marina Shores by Emaar"},
+ {t:"BIM Engineer",c:"SECC Group",w:"Feb 2025 – May 2026",l:"Saudi Arabia",
+  d:["Developed and reviewed architectural BIM models in line with the BEP at LOD 350–500","Extracted quantity takeoffs from Revit and supported 4D integration","Represented the BIM team in weekly coordination meetings"],
+  p:"Retal Rise & Nobu Hotel, Al Khobar (Client: Retal)"},
+ {t:"BIM Interior Designer",c:"Spacemaker KSA (NESMA)",w:"Jul 2023 – Jan 2025",l:"Saudi Arabia",
+  d:["Built LOD 350–500 interior models with finish schedules and material specifications","Coordinated with architecture, MEP and structure to clear clashes before issue","Delivered prefabricated bathroom pod and modular building packages"],
+  p:"Shura Island Golf Villas pods (Red Sea Global) · Trojena camp (NEOM) · G+1 Office for Aramco"},
+ {t:"Architectural Designer / BIM Coordinator",c:"La Gare Design",w:"Jan 2023 – Jun 2023",l:"Cairo, Egypt",
+  d:["Delivered BIM models remotely for Australian and Saudi clients","Produced working drawings and LOD 350–500 deliverables with regular model health checks"],
+  p:"AKIN Tower · Hercules St · Surfers Paradise Blvd · Burwood Hwy clinic · Bond Street · KAFD car park"},
+ {t:"Technical Office Engineer / Site Engineer",c:"High Custom Craft (HCC)",w:"Jan 2020 – Dec 2022",l:"Egypt",
+  d:["Prepared shop and as-built drawings for metalwork, mirror and interior finishing works","Managed submittals with main contractors and verified site works against approved drawings"],
+  p:"ETAPA Mall · El Brouj Compound · Vida Marassi · Giza Plateau"}];
+const S=n=>"img/p"+n+".jpg";
+const projects=[
+ {n:"Marina Shores",m:"Emaar · Dubai Marina, UAE · 2026",c:"UAE",d:"53-storey waterfront residential tower. Federated model, podium landscape, joinery packages and mock-up unit through to delivered interiors.",i:1,s:[4,6,7,11,12]},
+ {n:"Retal Rise & Nobu Hotel",m:"Retal · Al Khobar, KSA · 2024–2026",c:"Saudi Arabia",d:"Two towers with Nobu hotel and residences. Interior packages for lobby, spa and guest rooms, coordinated from model to as-built.",i:2,s:[13,15,16,17,24,25,27]},
+ {n:"G+1 Office · Aramco",m:"Spacemaker KSA for NESMA · Al Khobar · 2024",c:"Saudi Arabia",d:"Prefabricated steel-framed office designed for off-site manufacture, with wall types, stair and connection details.",i:3,s:[28,30,31]},
+ {n:"Bathroom Pod 20",m:"Red Sea Global · Shura Island, KSA · 2024",c:"Saudi Arabia",d:"1,200 prefabricated bathroom pods across 16 types — steel frame, fit-out, glass partition and vanity details.",i:4,s:[33,35,36]},
+ {n:"AKIN Residences",m:"Descon · South Brisbane, Australia · 2024",c:"Australia",d:"Luxury high-rise delivered remotely in Revit: basements, podium, typical floors, façades and enlarged units.",i:5,s:[38,40,41,45]},
+ {n:"Clinic Complex",m:"JM Studio Architects · Tecoma VIC, Australia · 2023",c:"Australia",d:"Multi-specialty medical clinic: plans, sections, wall sections, stairs, phasing and interior elevations.",i:6,s:[46,48,51]},
+ {n:"Surfers Paradise Blvd",m:"Descon Group · Gold Coast, Australia · 2023",c:"Australia",d:"Oval-plan residential tower with diagrid podium — Revit model plus tower plans, sections and façade details.",i:7,s:[52,54,55]},
+ {n:"Hercules Street",m:"Descon · Hamilton, Brisbane, Australia · 2023",c:"Australia",d:"28-storey residential tower over podium and basements, with stepped crown, unit mix and area schedules.",i:8,s:[59,61,62,66]},
+ {n:"38 Bond Street",m:"Descon · Maroubra NSW, Australia · 2023",c:"Australia",d:"Residential apartments, basement to roof: sections, façade details, fire compartments and stairs.",i:9,s:[67,69,73]},
+ {n:"360 Project · Building A1",m:"Landmark Sabbour · New Cairo, Egypt · 2021",c:"Egypt",d:"Issued-for-construction office building: 23-sheet A0 set with curtain-wall façades, cores and details.",i:10,s:[74,76,77]}];
+const certs=[
+ ["Project Management Professional (PMP)®","Project Management Institute","Issued Nov 2025 · Expires Nov 2031 · ID 4232807"],
+ ["BIM Project Information Professional","BSI · ISO 19650","Issued Dec 2025 · ID PQ-00295794"],
+ ["BIM Asset Information Professional","BSI · ISO 19650","Issued Dec 2025 · ID PQ-00295809"],
+ ["BIM Project Information Practitioner","BSI · ISO 19650","Issued Dec 2025 · ID PQ-00295757"],
+ ["BIM Asset Information Practitioner","BSI · ISO 19650","Issued Dec 2025 · ID PQ-00295776"],
+ ["Revizto Expert Level 2 – Coordination Mastery","Revizto","Issued May 2026 · ID C12163"],
+ ["Revizto Expert Level 1 – Collaboration Essentials","Revizto","Issued May 2026 · ID C12127"],
+ ["ISO 19650 & BIM Management Certification","Autodesk","ID EM303368098340805265103"],
+ ["BIM Coordinator Diploma","Autodesk","ID EM303368097485325265103"],
+ ["Navisworks Manage Certification","Autodesk","ID EM303368097562485265103"]];
+const badges=[
+ ["Project Management Professional (PMP)®","Expires Nov 14, 2031"],
+ ["AI in Agile Delivery","Issued Jun 12, 2026"],
+ ["PMI® Essentials: M.O.R.E. In Action","Issued Jun 12, 2026"],
+ ["Value Stream Management","Issued Jun 12, 2026"],
+ ["Generative AI Overview for Project Managers","Issued Jun 11, 2026"],
+ ["Talking to AI: Prompt Engineering for Project Managers","Issued Jun 11, 2026"],
+ ["Practical Application of Gen AI for Project Managers","Issued Dec 17, 2025"]];
+const $=id=>document.getElementById(id);
+$("badges").innerHTML=badges.map(([a,c])=>`<a class="cert" href="https://www.credly.com/users/andrew-eshak.8b222753" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="iss">Project Management Institute · Credly</span><b>${a}</b><small>${c}</small></a>`).join("");
+$("skills").innerHTML=skills.map(([h,p])=>`<div class="box"><h3>${h}</h3><p>${p}</p></div>`).join("");
+$("tools").innerHTML=tools.map(t=>`<span class="chip">${t}</span>`).join("");
+$("jobs").innerHTML=jobs.map(j=>`<div class="job"><div class="when">${j.w}<br>${j.l}</div><div><h3>${j.t}${j.now?'<span class="now">Current</span>':''}</h3><div class="co">${j.c}</div><ul>${j.d.map(x=>`<li>${x}</li>`).join("")}</ul><div class="pj"><b>Projects:</b> ${j.p}</div></div></div>`).join("");
+$("certs").innerHTML=certs.map(([a,b,c])=>`<div class="cert"><span class="iss">${b}</span><b>${a}</b><small>${c}</small></div>`).join("");
+const pick=[0,1,7];
+$("strip").innerHTML=pick.map(k=>`<button data-p="${k}" aria-label="Open ${projects[k].n}"><img src="img/covers/c${projects[k].i}.jpg" alt="${projects[k].n}"><span>${projects[k].n}</span></button>`).join("");
+const countries=["All","UAE","Saudi Arabia","Australia","Egypt"];
+let cur="All";
+const renderCards=()=>{$("cards").innerHTML=projects.map((p,k)=>[p,k]).filter(([p])=>cur==="All"||p.c===cur).map(([p,k])=>`<button class="card" data-p="${k}"><img loading="lazy" src="img/covers/c${p.i}.jpg" alt="${p.n}"><div class="b"><h3>${p.n}</h3><div class="m">${p.m}</div><p>${p.d}</p><span class="more">View ${p.s.length} sheets →</span></div></button>`).join("");
+ $("filters").innerHTML=countries.map(c=>`<button aria-pressed="${c===cur}" data-c="${c}">${c}${c==="All"?"":" · "+projects.filter(p=>p.c===c).length}</button>`).join("");};
+renderCards();
+$("filters").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;cur=b.dataset.c;renderCards();});
+const dlg=$("dlg"),sl=$("slides");let idx=0,n=0;
+const upd=()=>{$("count").textContent=(idx+1)+" / "+n;};
+const go=i=>{idx=Math.max(0,Math.min(n-1,i));sl.children[idx].scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"});upd();};
+const open=k=>{const p=projects[k];$("dlgT").textContent=p.n;$("dlgM").textContent=p.m;n=p.s.length;idx=0;
+ sl.innerHTML=p.s.map((x,j)=>`<figure><img src="${S(x)}" alt="${p.n} sheet ${j+1}" loading="lazy"></figure>`).join("");
+ try{dlg.showModal()}catch(e){dlg.setAttribute("open","")}sl.scrollLeft=0;upd();};
+document.addEventListener("click",e=>{const b=e.target.closest("[data-p]");if(b)open(+b.dataset.p);});
+$("close").onclick=()=>dlg.close();
+$("prev").onclick=()=>go(idx-1);$("next").onclick=()=>go(idx+1);
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close();});
+dlg.addEventListener("keydown",e=>{if(e.key==="ArrowRight"){e.preventDefault();go(idx+1)}if(e.key==="ArrowLeft"){e.preventDefault();go(idx-1)}});
+sl.addEventListener("scroll",()=>{const i=Math.round(sl.scrollLeft/sl.clientWidth);if(i!==idx){idx=i;upd();}},{passive:true});
+}
+</script>
+</body>
+</html>
