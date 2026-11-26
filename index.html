@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#111214">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andrew Eshak — BIM Architect Engineer</title>
 <meta name="description" content="Andrew Eshak — BIM Architect Engineer in Dubai. Revit, Navisworks, Revizto, ISO 19650. Projects across the UAE, Saudi Arabia, Australia and Egypt.">
@@ -14,11 +16,10 @@
    PICTURE: a strip of three project plates up top; every project opens as a sheet set
    COLOUR and TYPE: charcoal ground, bone ink, glass-blue accent; Cormorant Garamond + Inter
    LAYOUT: fixed identity column left, long scroll right; stacks on narrow screens */
-:root{color-scheme:light dark;
+:root{color-scheme:dark;
  --bg:light-dark(#f3f2ee,#111214);--panel:light-dark(#e9e7e1,#18191c);--card:light-dark(#ffffff,#1d1e22);
  --ink:light-dark(#16171a,#ecebe6);--mute:light-dark(#5c5e64,#9c9da3);--line:light-dark(#d6d3cb,#2b2d32);
  --acc:light-dark(#1f5f8f,#8cc3e6)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 html{scroll-padding-top:24px;scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
@@ -269,15 +270,15 @@ const certs=[
  ["BIM Coordinator Diploma","Autodesk","ID EM303368097485325265103"],
  ["Navisworks Manage Certification","Autodesk","ID EM303368097562485265103"]];
 const badges=[
- ["Project Management Professional (PMP)®","Expires Nov 14, 2031"],
- ["AI in Agile Delivery","Issued Jun 12, 2026"],
- ["PMI® Essentials: M.O.R.E. In Action","Issued Jun 12, 2026"],
- ["Value Stream Management","Issued Jun 12, 2026"],
- ["Generative AI Overview for Project Managers","Issued Jun 11, 2026"],
- ["Talking to AI: Prompt Engineering for Project Managers","Issued Jun 11, 2026"],
- ["Practical Application of Gen AI for Project Managers","Issued Dec 17, 2025"]];
+ ["Project Management Professional (PMP)®","Expires Nov 14, 2031","cf3963a6-b097-4ef5-8285-8b94cd92bc5c"],
+ ["AI in Agile Delivery","Issued Jun 12, 2026","14e9deca-07bd-44b9-a060-544d38bde97d"],
+ ["PMI® Essentials: M.O.R.E. In Action","Issued Jun 12, 2026","e02a4f42-b26c-444a-ba50-52f0ed51f8a3"],
+ ["Value Stream Management","Issued Jun 12, 2026","9d4a2e25-6c60-4f18-a58c-e3b46df0b77e"],
+ ["Generative AI Overview for Project Managers","Issued Jun 11, 2026","c512c9b6-c1f0-4e56-b8ac-2e19355f958b"],
+ ["Talking to AI: Prompt Engineering for Project Managers","Issued Jun 11, 2026","f5986831-cfbc-471f-9c92-2b9854674cc8"],
+ ["Practical Application of Gen AI for Project Managers","Issued Dec 17, 2025","3ab2ef60-162e-48e9-9410-21dc2622be37"]];
 const $=id=>document.getElementById(id);
-$("badges").innerHTML=badges.map(([a,c])=>`<a class="cert" href="https://www.credly.com/users/andrew-eshak.8b222753" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="iss">Project Management Institute · Credly</span><b>${a}</b><small>${c}</small></a>`).join("");
+$("badges").innerHTML=badges.map(([a,c,id])=>`<a class="cert" href="https://www.credly.com/badges/${id}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="iss">Project Management Institute · Credly</span><b>${a}</b><small>${c}</small></a>`).join("");
 $("skills").innerHTML=skills.map(([h,p])=>`<div class="box"><h3>${h}</h3><p>${p}</p></div>`).join("");
 $("tools").innerHTML=tools.map(t=>`<span class="chip">${t}</span>`).join("");
 $("jobs").innerHTML=jobs.map(j=>`<div class="job"><div class="when">${j.w}<br>${j.l}</div><div><h3>${j.t}${j.now?'<span class="now">Current</span>':''}</h3><div class="co">${j.c}</div><ul>${j.d.map(x=>`<li>${x}</li>`).join("")}</ul><div class="pj"><b>Projects:</b> ${j.p}</div></div></div>`).join("");
